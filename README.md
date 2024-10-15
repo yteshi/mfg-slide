@@ -11,6 +11,8 @@ of the University of Tokyo.
 ## Licence
 
 This theme are distributed under the GNU Public License.
+The latest version is available at [https://www.gnu.org/licenses/gpl-3.0.html] .
+See the file LICENSE for more details.
 
 ## Challenge log
 

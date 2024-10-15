@@ -1,3 +1,8 @@
+% Copyright 2024 by Yuta Teshima
+%
+% This file may be distributed and/or modified under the GNU Public License.
+% The latest version is available at https://www.gnu.org/licenses/gpl-3.0.html .
+% See the file LICENSE for more details.
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{mfg-slide}[2024/10/13 mfg-slide]
 
@@ -24,7 +29,9 @@
         }%
     \end{frame}}
 
-% beamerbaseboxes.sty
+% Modified code of `beamerbaseboxes.sty`
+% Modified lines are marked with `% NEW`.
+% The original code is available https://github.com/josephwright/beamer/blob/main/base/beamerbaseboxes.sty
 \renewcommand\beamerboxesrounded[2][]{%
     \global\let\beamer@firstlineitemizeunskip=\relax%
     \vbox\bgroup%
