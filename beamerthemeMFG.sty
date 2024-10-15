@@ -1,0 +1,23 @@
+\mode<presentation>
+
+\RequirePackage{tikz}
+
+% Define \foot and \@foot
+\newcommand{\foot}[1]{\gdef\@foot{#1}}
+\newcommand{\@foot}{}
+
+% Load the required logos
+\newcommand{\UTokyoLogoA}{\includegraphics[height=.12\paperheight]{UTokyo_Logotype_A_Color_CMYK20240401.pdf}}
+\newcommand{\UTokyoLogoB}{\includegraphics[height=.12\paperheight]{UTokyo_Logotype_B_Color_CMYK20240401.pdf}}
+\newcommand{\UTokyoLogoC}{\includegraphics[height=.12\paperheight]{UTokyo_Logotype_C_Color_CMYK20240401.pdf}}
+\newcommand{\CatIcon}{\includegraphics[height=0.3cm]{mfg-cat.pdf}}
+\newcommand{\BigCatIcon}{\includegraphics[height=.08\paperheight]{mfg-cat.pdf}}
+
+% Load the outer theme
+\usecolortheme{MFG}
+\useinnertheme{MFG}
+\useoutertheme{MFG}
+
+
+\mode
+<all>

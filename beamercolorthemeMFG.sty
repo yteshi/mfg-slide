@@ -1,0 +1,36 @@
+% Copyright 2007 by Till Tantau
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+\mode<presentation>
+
+\definecolor{UTyellow}{RGB}{255, 205, 0}
+\definecolor{UTblue}{RGB}{11, 139, 238}
+\definecolor{UTgreen}{RGB}{53, 202, 0}
+\definecolor{UTred}{RGB}{215, 17, 49}
+\definecolor{UTpurple}{RGB}{143, 7, 170}
+\definecolor{UTlightblue}{RGB}{91, 222, 255}
+
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamercolor{alerted text}{fg=UTred}
+\setbeamercolor{example text}{fg=UTgreen!50!black}
+
+\setbeamercolor{structure}{fg=UTblue}
+
+\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!75!black}
+\setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=alerted text.fg!75!black}
+\setbeamercolor{block title example}{use=example text,fg=white,bg=example text.fg!75!black}
+
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!10!bg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!10!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!10!bg}
+
+\setbeamercolor{footer body}{fg=gray!75!black}
+
+\mode
+<all>

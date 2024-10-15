@@ -1,0 +1,57 @@
+\mode<presentation>
+
+\setbeamersize{text margin left=7mm, text margin right=7mm}
+\setbeamersize{sidebar width left=2mm, sidebar width right=2mm}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Background with gray and rounded white main area with asymmetric spacing
+\setbeamertemplate{background canvas}{
+  \begin{tikzpicture}[remember picture,overlay]
+    % Gray background
+    \fill[gray!15] (current page.south west) rectangle (current page.north east);
+
+    % White main area with rounded corners and asymmetric top/bottom spacing
+    \fill[white, rounded corners=1mm] 
+      ([xshift=2mm,yshift=5mm]current page.south west) rectangle
+      ([xshift=-2mm,yshift=-2mm]current page.north east);
+  \end{tikzpicture}
+}
+
+\setbeamertemplate{headline}{
+    \begin{tikzpicture}[overlay, remember picture]
+        \node[anchor=east] at ([yshift=-8mm,xshift=-2.5mm]current page.north east) {\UTokyoLogoB};
+    \end{tikzpicture}
+    \vskip4.5mm
+}
+
+% Footline with page number on the left and cat icon on the right, surrounded by a light gray circle
+\setbeamertemplate{footline}{
+  \vspace{5mm}
+  \begin{tikzpicture}[remember picture,overlay]
+    % Page number at the bottom left
+    \fill[anchor=south, gray!5, rounded corners=1mm] ([xshift=2mm,yshift=0.5mm]current page.south west) 
+        rectangle ++(8mm, 4mm); % Light gray rectangle
+    
+    % Place the page number directly without an additional node
+    \node[anchor=center] at ([xshift=6mm,yshift=2.5mm]current page.south west) 
+        {\usebeamercolor[fg]{footer body}\insertframenumber/\inserttotalframenumber}; % Page number
+    
+    % Footer text at the bottom center
+    \node[anchor=center] at ([yshift=2.5mm]current page.south) {
+        \usebeamercolor[fg]{footer body}\@foot
+    };
+
+    % Draw a light gray circle and place the cat icon inside it at the bottom right
+    \node[anchor=east] at ([yshift=2.5mm, xshift=-2mm]current page.south east) 
+    {
+        \begin{tikzpicture}
+            \filldraw[fill=gray!5, draw=none] circle (0.2cm); % Light gray circle
+            \node[anchor=center] at (0, 0) {\CatIcon}; % Cat icon in the center
+        \end{tikzpicture}
+    };
+  \end{tikzpicture}
+}
+
+\mode
+<all>

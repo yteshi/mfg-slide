@@ -1,0 +1,61 @@
+\mode<presentation>
+
+\setbeamertemplate{blocks}[rounded]
+
+%% ------------------------------------------ Title page -------------------------------------------
+\setbeamertemplate{title page}{
+    \thispagestyle{navigation@titlepage}
+    \begin{tikzpicture}[overlay, remember picture]
+        \node[anchor=west] at ([yshift=-8mm,xshift=5mm]current page.north west) {\BigCatIcon};
+        \node[anchor=east] at ([yshift=-8mm,xshift=-1mm]current page.north east) {\UTokyoLogoA};
+    \end{tikzpicture}
+  \vbox{}
+  \vfill
+  \vbox{
+    \vfill
+    \begin{centering}
+        {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}
+        \vskip1.0em
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}
+        \vskip3.0em
+        {\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par}
+        \vskip1.0em
+        {\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate\par}
+    \end{centering}
+  }
+}
+
+% Navigation bar for the title page
+\def\ps@navigation@titlepage{%
+  \setbeamertemplate{footline}{%
+    \begin{tikzpicture}[remember picture,overlay]
+    % Footer text at the bottom center
+    \node[anchor=south] at ([yshift=0.5mm]current page.south) {
+       \usebeamercolor[fg]{footer body}\@foot
+    };
+    \end{tikzpicture}%
+  }
+  \setbeamertemplate{headline}{}
+  \@nameuse{ps@navigation}%
+}
+
+%% ------------------------------------------ Frame title ------------------------------------------ 
+\setbeamertemplate{frametitle}{
+    \@tempdima=\textwidth%
+    \advance\@tempdima by0.5\beamer@leftmargin%
+    \advance\@tempdima by0.5\beamer@rightmargin%
+    \begin{beamercolorbox}[sep=0mm,wd=\@tempdima]{frametitle}
+    \usebeamerfont{frametitle}%
+    \vbox{}\vskip-1ex%
+    \strut\insertframetitle\strut\par%
+    {%
+        \ifx\insertframesubtitle\@empty%
+        \else%
+        {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\strut\insertframesubtitle\strut\par}%
+        \fi
+    }%
+    \end{beamercolorbox}%
+}
+
+\mode
+<all>
